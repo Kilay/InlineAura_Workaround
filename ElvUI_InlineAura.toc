@@ -1,9 +1,0 @@
-## Interface: 50001
-## Title: |cff1784d1ElvUI|r InlineAura|r
-## Author: Kilay
-## Notes: Elv's UI InlineAura
-## Version: 1.1
-## RequiredDeps: InlineAura
-## X-Credits: Potente from Tichondrius (https://github.com/enorthey/Tukui), Elv (http://www.tukui.org/forums/profile.php?id=232)
-
-core.lua

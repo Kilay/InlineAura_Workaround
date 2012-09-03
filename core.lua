@@ -7,7 +7,7 @@ function InlineAura:UpdateButtonState(state)
 	if color then
 		state.button:SetChecked(true)
 		local backdrop = { 
-		  edgeFile = "Interface\\AddOns\\ElvUI_InlineAura\\media\\background_flat",
+		  edgeFile = "Interface\\AddOns\\InlineAura_Workaround\\media\\background_flat",
 		  tile = false,
 		  tileSize = 32, 
 		  edgeSize = 1, 
