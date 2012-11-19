@@ -1,27 +1,24 @@
+local ADDON_NAME, Engine = ...
+if not Engine.Enabled then return end
+
+local UI = Engine.UI
 local InlineAura = LibStub('AceAddon-3.0'):GetAddon('InlineAura')
 local profile = InlineAura.db and InlineAura.db.profile
+local buttonStateProto = InlineAura.buttonStateProto
 
-function InlineAura:UpdateButtonState(state)
-	if state.highlight ~= "border" then state.button:SetBackdrop(nil); return end
-	local color = profile["color"..state.highlightBorder]
-	if color then
-		state.button:SetChecked(true)
-		local backdrop = { 
-		  edgeFile = "Interface\\AddOns\\InlineAura_Workaround\\media\\background_flat",
-		  tile = false,
-		  tileSize = 32, 
-		  edgeSize = 1, 
-		  insets = { 
-			left = 10, 
-			right = 10, 
-			top = 10, 
-			bottom = 10,
-		  },
-		}
-		state.button:SetBackdrop(backdrop)
-		state.button:SetBackdropColor(0,0,0,0)
-		state.button:SetBackdropBorderColor(unpack(color))
-	else
-		state.button:GetCheckedTexture():SetVertexColor(1, 1, 1)
+function buttonStateProto:UpdateState()	
+	if self.highlight == "border" then
+		local color = profile["color"..self.highlightBorder]
+		if color then
+			self.button:SetChecked(true)	
+			self.button:SetBackdrop(UI.backdrop)
+			self.button:SetBackdropColor(0,0,0,0)
+			self.button:SetBackdropBorderColor(unpack(color))
+			return
+		end
 	end
+	self.button:SetBackdrop(UI.backdrop)
+	self.button:SetBackdropColor(0,0,0,0)
+	self.button:SetBackdropBorderColor(unpack(UI.borderColor))
+	self.previousCheckedColors = nil
 end
