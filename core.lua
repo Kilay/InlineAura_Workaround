@@ -11,14 +11,10 @@ function buttonStateProto:UpdateState()
 		local color = profile["color"..self.highlightBorder]
 		if color then
 			self.button:SetChecked(true)	
-			self.button:SetBackdrop(UI.backdrop)
-			self.button:SetBackdropColor(0,0,0,0)
+			self.button:SetTemplate('Transparent')
 			self.button:SetBackdropBorderColor(unpack(color))
 			return
 		end
 	end
-	self.button:SetBackdrop(UI.backdrop)
-	self.button:SetBackdropColor(0,0,0,0)
-	self.button:SetBackdropBorderColor(unpack(UI.borderColor))
-	self.previousCheckedColors = nil
+	self.button:SetTemplate('Transparent')
 end
