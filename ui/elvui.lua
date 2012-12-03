@@ -15,14 +15,12 @@ local E, _, _, P, _, _ = unpack(ElvUI)
 UI.borderColor = P.general.bordercolor
 if E.private.general.pixelPerfect then
 	UI.backdrop = {
-		bgFile = E["media"].blankTex, 
 		edgeFile = E["media"].blankTex, 
 		tile = false, tileSize = 0, edgeSize = E.mult, 
 		insets = { left = 0, right = 0, top = 0, bottom = 0}
 	}
 else
 	UI.backdrop = {
-		bgFile = E["media"].blankTex, 
 		edgeFile = E["media"].blankTex, 
 		tile = false, tileSize = 0, edgeSize = E.mult, 
 		insets = { left = -E.mult, right = -E.mult, top = -E.mult, bottom = -E.mult}
