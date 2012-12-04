@@ -2,7 +2,7 @@
 ## Title:  InlineAura |cff1784d1Workaround|r
 ## Author: Kilay
 ## Notes: InlineAura Workaround
-## Version: 1.4
+## Version: 1.4.1
 ## RequiredDeps: InlineAura
 ## OptionalDeps: Tukui, ElvUI
 ## X-Credits: Potente from Tichondrius (https://github.com/enorthey/Tukui), Elv (http://www.tukui.org/forums/profile.php?id=232) and Adirelle
