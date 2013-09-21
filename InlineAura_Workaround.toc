@@ -1,8 +1,8 @@
-## Interface: 50100
+## Interface: 50400
 ## Title:  InlineAura |cff1784d1Workaround|r
 ## Author: Kilay
 ## Notes: InlineAura Workaround
-## Version: 1.4.1
+## Version: 1.7
 ## RequiredDeps: InlineAura
 ## OptionalDeps: Tukui, ElvUI
 ## X-Credits: Potente from Tichondrius (https://github.com/enorthey/Tukui), Elv (http://www.tukui.org/forums/profile.php?id=232) and Adirelle
